@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { fetchBlog } from '../../actions';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { fetchBlog } from "../../actions";
 
 class BlogShow extends Component {
   componentDidMount() {
@@ -11,8 +11,9 @@ class BlogShow extends Component {
     if (this.props.blog.imageUrl) {
       return (
         <img
+          alt="abc"
           src={
-            'https://s3-us-west-2.amazonaws.com/my-blog-bucket-123/' +
+            "https://s3-us-west-2.amazonaws.com/my-blog-bucket-123/" +
             this.props.blog.imageUrl
           }
         />
@@ -22,7 +23,7 @@ class BlogShow extends Component {
 
   render() {
     if (!this.props.blog) {
-      return '';
+      return "";
     }
 
     const { title, content } = this.props.blog;
