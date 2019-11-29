@@ -15,7 +15,6 @@ class BlogShow extends Component {
             "https://s3-us-west-2.amazonaws.com/my-blog-bucket-123/" +
             this.props.blog.imageUrl
           }
-          alt="abc"
         />
       );
     }
